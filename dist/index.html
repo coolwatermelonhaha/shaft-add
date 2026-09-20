@@ -58,6 +58,37 @@ body.mobile #close-inv-btn{display:flex}
 <div id="inv-screen"><div id="inv-panel"><div id="close-inv-btn">✕</div><div id="inv-left"><div id="inv-title">Inventory</div><div id="crafting-area"><div id="crafting-grid-2x2"></div><div id="crafting-arrow">→</div><div id="crafting-output"></div></div><div class="inv-label">Storage</div><div id="inv-grid"></div><div class="inv-label">Hotbar</div><div id="inv-hotbar-grid"></div><div id="inv-hint">Tap: pickup · Long-press: split · Trash: delete · X: close</div></div><div id="creative-panel"><h3>Creative Blocks</h3><div id="creative-hint">Tap: +64</div><div id="creative-grid"></div></div></div></div>
 <div id="furnace-ui"><div id="furnace-panel"><div id="furnace-title">Furnace</div><div id="furnace-main"><div id="furnace-col-left"><div id="furnace-input-slot" class="furnace-slot"></div><div id="furnace-flames">🔥</div><div style="position:relative"><div id="furnace-fuel-slot" class="furnace-slot"></div><div id="furnace-fuel-bar" style="position:absolute;top:-26px;left:0"><div id="furnace-fuel-fill"></div></div></div></div><div id="furnace-center"><div id="furnace-progress"><div id="furnace-progress-fill"></div></div><div style="font-size:24px;color:#555">→</div></div><div id="furnace-output-slot" class="furnace-slot"></div></div><div class="inv-label">Inventory</div><div id="furnace-inv-grid"></div><div class="inv-label">Hotbar</div><div id="furnace-hotbar-grid"></div><div id="inv-hint" style="color:#333;font-size:13px;text-align:center;margin-top:10px">Ore top · Fuel bottom · Output right · E to close</div></div></div>
 <div id="death-screen"><h1>You died!</h1><div class="score" id="death-score">Score: 0</div><button class="death-btn" id="btn-respawn">Respawn</button><button class="death-btn" id="btn-title">Title screen</button></div>
+<div id="update-banner" style="display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#2a5db0;color:#fff;padding:12px 24px;border-radius:8px;font-family:'Pixelify Sans',monospace;font-size:16px;cursor:pointer;z-index:10000;box-shadow:0 4px 12px rgba(0,0,0,.5);border:2px solid #fff;text-shadow:1px 1px 0 #000">
+  ✨ New version available — tap to update
+</div>
+<script>
+if ("serviceWorker" in navigator) {
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (refreshing) return;
+    refreshing = true;
+    window.location.reload();
+  });
+
+  navigator.serviceWorker.register("sw.js").then((reg) => {
+    reg.addEventListener("updatefound", () => {
+      const newWorker = reg.installing;
+      if (!newWorker) return;
+      newWorker.addEventListener("statechange", () => {
+        if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+          const banner = document.getElementById("update-banner");
+          banner.style.display = "block";
+          banner.addEventListener("click", () => {
+            newWorker.postMessage("SKIP_WAITING");
+          });
+        }
+      });
+    });
+    // Check for updates every 60 seconds while the page is open
+    setInterval(() => reg.update(), 60000);
+  });
+}
+</script>
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
 <script type="module">
 import * as THREE from 'three';
