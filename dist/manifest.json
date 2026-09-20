@@ -1,0 +1,15 @@
+{
+  "name": "Shaft Additionality",
+  "short_name": "ShaftAdd",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#87ceeb",
+  "theme_color": "#4caf50",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}
