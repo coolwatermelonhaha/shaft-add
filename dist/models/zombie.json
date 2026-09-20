@@ -1,0 +1,42 @@
+{
+  "credit": "Made with Blockbench",
+  "textureSize": [64, 64],
+  "models": [
+    {
+      "part": "head",
+      "boxes": [
+        {"coordinates": [-4, 24, -4, 8, 8, 8], "textureOffset": [0, 0]}
+      ]
+    },
+    {
+      "part": "body",
+      "boxes": [
+        {"coordinates": [-4, 12, -2, 8, 12, 4], "textureOffset": [16, 16]}
+      ]
+    },
+    {
+      "part": "left_arm",
+      "boxes": [
+        {"coordinates": [-8, 12, -2, 4, 12, 4], "textureOffset": [40, 16]}
+      ]
+    },
+    {
+      "part": "right_arm",
+      "boxes": [
+        {"coordinates": [4, 12, -2, 4, 12, 4], "textureOffset": [40, 16]}
+      ]
+    },
+    {
+      "part": "left_leg",
+      "boxes": [
+        {"coordinates": [-4, 0, -2, 4, 12, 4], "textureOffset": [0, 16]}
+      ]
+    },
+    {
+      "part": "right_leg",
+      "boxes": [
+        {"coordinates": [0, 0, -2, 4, 12, 4], "textureOffset": [0, 16]}
+      ]
+    }
+  ]
+}

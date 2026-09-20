@@ -1,0 +1,54 @@
+{
+  "credit": "Made with Blockbench 5.2.0",
+  "textureSize": [128, 128],
+  "models": [
+    {
+      "part": "leg_front_left",
+      "boxes": [
+        {"coordinates": [-8, -11, -11, 4, 11, 4], "textureOffset": [36, 31]}
+      ]
+    },
+    {
+      "part": "leg_front_right",
+      "boxes": [
+        {"coordinates": [4, -11, -11, 4, 11, 4], "textureOffset": [36, 46]}
+      ]
+    },
+    {
+      "part": "leg_back_left",
+      "boxes": [
+        {"coordinates": [-8, -11, 7, 4, 11, 4], "textureOffset": [0, 49]}
+      ]
+    },
+    {
+      "part": "leg_back_right",
+      "boxes": [
+        {"coordinates": [4, -11, 7, 4, 11, 4], "textureOffset": [16, 49]}
+      ]
+    },
+    {
+      "part": "body",
+      "boxes": [
+        {"coordinates": [-8, -20, -11, 16, 9, 22], "textureOffset": [0, 0]}
+      ]
+    },
+    {
+      "part": "head",
+      "boxes": [
+        {"coordinates": [-4, -24, -20, 9, 9, 9], "textureOffset": [0, 31]}
+      ]
+    },
+    {
+      "part": "horn_left",
+      "boxes": [
+        {"coordinates": [-5, -26, -17, 1, 4, 1], "textureOffset": [32, 49]}
+      ]
+    },
+    {
+      "part": "horn_right",
+      "boxes": [
+        {"coordinates": [5, -26, -17, 1, 4, 1], "textureOffset": [52, 31]}
+      ]
+    }
+  ]
+}

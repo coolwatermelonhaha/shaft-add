@@ -1,0 +1,10 @@
+{
+  "cow": {
+    "model": "models/cow.json",
+    "color": "#8b5a2b"
+  },
+  "zombie": {
+    "model": "models/zombie.json",
+    "color": "#4a6b3a"
+  }
+}
