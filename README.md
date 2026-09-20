@@ -12,7 +12,7 @@ Part of the **Additionality** universe — eventually expanding with food, farmi
 
 ## Where to play?
 
-You can join the game by [clicking here](https://coolwatermelonhaha.github.io/shaft-add/).
+You can join the game by [clicking here](https://coolwatermelonhaha.github.io/shaft-add/dist/).
 
 ## Features
 
