@@ -10,6 +10,10 @@ Shaft Additionality is a Minecraft-inspired voxel sandbox that runs entirely in 
 
 Part of the **Additionality** universe — eventually expanding with food, farming, and other systems from the *Food Additionality* Minecraft mod.
 
+## Where to play?
+
+You can join the game by [clicking here](https://coolwatermelonhaha.github.io/shaft-add/).
+
 ## Features
 
 - **Voxel world** generated from procedural noise — biomes, caves, ores
